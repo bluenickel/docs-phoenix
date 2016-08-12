@@ -44,6 +44,12 @@ If you are using Visual Studio Code or another similar editor such as Sublime or
 
 _**Note:**_ If you are using Visual Studio, you will need to remove the reference to the Module-Skeleton project in the solution and add an existing project for the project file that you have renamed.
 
+Rename the directory `src/module-skeleton` to the name name of your module.
+
+Edit the information in package.json to reflect your new module.
+
+![Package.json](get-started/package.json.png)
+
 ## 3. Install Dependencies
 You need to install NPM and JSPM dependencies as well as the TypeScript typings. The following commands describe how to do this. All the commands in this section should be executed in the same directory as your module directory, the one you just created.
 
