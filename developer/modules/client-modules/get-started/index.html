@@ -198,14 +198,14 @@ Modules are split into two types, client modules and server modules. This docume
 <h3 id="download">Download</h3>
 <p>You can download the repository as a zip file by browsing to the following link. Extract the contents to the desired location.</p>
 <p><a href="https://bluenickel.visualstudio.com/Phoenix-Platform/_git/Module-Skeleton">https://bluenickel.visualstudio.com/Phoenix-Platform/_git/Module-Skeleton</a></p>
-<p><img alt="Download" src="../img/download.png" /></p>
+<p><img alt="Download" src="../img/developer/modules/client-modules/download.png" /></p>
 <h2 id="2-preparing-the-module">2. Preparing the module</h2>
 <p>If you are using Visual Studio, rename <code>Module-Skeleton.csproj</code> and <code>Module-Skeleton.sln</code> to the desired name of your moduel.</p>
 <p>If you are using Visual Studio Code or another similar editor such as Sublime or Atom, you may optionally delete the two files above.</p>
 <p><em><strong>Note:</strong></em> If you are using Visual Studio, you will need to remove the reference to the Module-Skeleton project in the solution and add an existing project for the project file that you have renamed.</p>
 <p>Rename the directory <code>src/module-skeleton</code> to the name name of your module.</p>
 <p>Edit the information in package.json to reflect your new module.</p>
-<p><img alt="Package.json" src="../img/package.json.png" /></p>
+<p><img alt="Package.json" src="../img/developer/modules/client-modules/package.json.png" /></p>
 <h2 id="3-install-dependencies">3. Install Dependencies</h2>
 <p>You need to install NPM and JSPM dependencies as well as the TypeScript typings. The following commands describe how to do this. All the commands in this section should be executed in the same directory as your module directory, the one you just created.</p>
 <h3 id="install-npm-dependencies">Install NPM dependencies</h3>
@@ -265,12 +265,12 @@ ok   npm authentication is working successfully.
 <li>Then look for <code>Projects and Solutions-&gt;External Web Tools</code></li>
 <li>Add a new entry to <code>C:\Program Files\nodejs</code> (for an x64 install of Node.js) and move it to the top.</li>
 </ul>
-<p><img alt="External Web Tools" src="../img/external-web-tools.png" /></p>
+<p><img alt="External Web Tools" src="../img/developer/modules/client-modules/external-web-tools.png" /></p>
 <h3 id="hosting-the-module">Hosting the module</h3>
 <p>There are two options for hosting the module. You can use a local IIS server and configure the module project in Visual Studio, or, you can use the gulp serve task.</p>
 <p>We will leave out how to use a local IIS server for now. Use the serve task above to host the site and then browse to http://localhost:9000.</p>
 <p>You should see the default module tempalte and menu.</p>
-<p><img alt="Module Screenhsot" src="../img/module-screenshot.png" /></p>
+<p><img alt="Module Screenhsot" src="../img/developer/modules/client-modules/module-screenshot.png" /></p>
               
             </div>
           </div>
