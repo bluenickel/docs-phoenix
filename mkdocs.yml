@@ -1,5 +1,5 @@
 site_name: Phoenix Docs
-theme: readthedocs
+theme: material
 pages:
 - Home: 'index.md'
 - Installation: 
