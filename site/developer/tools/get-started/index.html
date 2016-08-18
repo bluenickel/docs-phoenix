@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Tools - Phoenix Docs</title>
+  
+
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tools";
+    var mkdocs_page_input_path = "developer\tools\get-started.md";
+    var mkdocs_page_url = "/developer/tools/get-started/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Phoenix Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Developer</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Modules</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/get-started/">Get Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/client-modules/get-started/">Client Modules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../modules/service-modules/get-started/">Service Modules</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Tools</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#get-started-with-tools">Get Started with Tools</a></li>
+                
+                    <li><a class="toctree-l4" href="#overview">Overview</a></li>
+                
+                    <li><a class="toctree-l4" href="#tool-components">Tool Components</a></li>
+                
+                    <li><a class="toctree-l4" href="#connectors">Connectors</a></li>
+                
+                    <li><a class="toctree-l4" href="#writing-a-basic-tool">Writing a basic tool</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Phoenix Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Developer &raquo;</li>
+        
+      
+    
+    <li>Tools</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="get-started-with-tools">Get Started with Tools</h1>
+<p>This document explains what tools are and shows how to quickly get started developing tools for Phoenix.</p>
+<h2 id="overview">Overview</h2>
+<p>A tool is a component in Phoenix which can be used to perform some action within an execution workflow. An execution workflow is a collection of tools structured and designed in such a way to accomplish some task.</p>
+<p>An example of an execution workflow may be generating and sending out a report by email. This worklflow might consist of the following tools.</p>
+<ul>
+<li>A tool to schedule when the report must be sent out.</li>
+<li>A report generation tool which generates the report and produces HTML or PDF.</li>
+<li>An email tool which sends out an email containing the HTML or attached PDF to a list of recipients.</li>
+</ul>
+<p>Another common example of an execution workflow is to extract, transform and write data from one location to another. This could be a workflow that extracts data from an Excel or CSV file and writes it into an MS SQL database. This workflow would consist of the following tools.</p>
+<ul>
+<li>An Excel or CSV file reader tool to read the contents of the Excel or CSV file.</li>
+<li>A Script tool which converts the extracted data into a format compatible for the database.</li>
+<li>A Relational Database tool which writes data to a relational database such as MS SQL, My SQL, Oracle or any relational database supported by Entity Framework.</li>
+</ul>
+<h2 id="tool-components">Tool Components</h2>
+<p>Tools consist of several components, both on the back-end and front-end. On the back-end tools consist of the following.</p>
+<ul>
+<li>Tool - the root of the tool which is enumerated and describes all the child components.</li>
+<li>ToolConfig - the tools configuration. This describes things like execution node and execution interval as well as other specific properties required for the tools execution.</li>
+<li>ToolActor - the tool actor performs all the actions or logic for the tool and uses the ToolConfig to create connectors (more about connectors later) as well as connect to servers or data sources.</li>
+<li>ToolService - the tool service provides optional services required to configure a tool of this type. For example, a Relational Database tool may provide a tool service which enumerates all databases on a given server. This allows the user to be able to enter in a IP address, machine name or Url on the tools' configuration form and then seeing a list of databases which they can then select one of.</li>
+</ul>
+<p>On the front-end, the components are views and view-models which describe the visual aspects of the tool and provide a user friendly way for the tool to be configured.</p>
+<ul>
+<li>Visual - the view/view-model representing how the tool is displayed on the workspace (workflow diagram).</li>
+<li>Config - the view/view-model for the configuration dialog that is presented to the user when configuring the settings for the tool.</li>
+</ul>
+<h2 id="connectors">Connectors</h2>
+<p>Connectors, as the name suggests, connects one tool to another tool. Connectors can be of various types and can be extended to suit most needs but typically, the data connector will be of most use. Connectors are provided by a tool and need to be updated when a tools' configuration changes. Every tool comes with a standard Execution Connector. This connector allows the flow of execution to be controlled from one tool to another. Generally there is nothing you need to do with this connector but you can add other Execution Actors to perform other actions which don't cause execution to be passed to any connected actors.</p>
+<h2 id="writing-a-basic-tool">Writing a basic tool</h2>
+<p>This section will walk you through creating a simple expression evaluating tool, based on the <a href="https://ncalc.codeplex.com/">NCalc</a> library.</p>
+<h3 id="1-setup-project">1. Setup Project</h3>
+<p>Create a new class library project. The name of this project can be the name of your tool. For example, "Expression".</p>
+<p>Install the Phoenix.Execution package from NuGet.</p>
+<p><code>PM&gt; Install-Package Phoenix.Execution -Version 0.0.1-beta</code></p>
+<h3 id="2-install-ncalc">2. Install NCalc</h3>
+<p>At this point you should install any necessary dependencies for the tool. In this case we need NCalc so install it from NuGet.</p>
+<p><code>PM&gt; Install-Package NCalc</code></p>
+<h3 id="3-add-the-tool-class">3. Add the tool class</h3>
+<p>The tool class is a class that defines a tool. It does nothing more than to provide info about the tool. Add a class called ExpressTool to the project and derive it from <code>Phoenix.Exceution.Tool</code>. Then implement the abstract members.</p>
+<p>```c#
+public class ExpressionTool : Tool
+{
+    public override string Category
+    {
+        get
+        {
+            return "General";
+        }
+    }</p>
+<pre><code>public override string Description
+{
+    get
+    {
+        return "Evaluates an expression";
+    }
+}
+
+public override string Icon
+{
+    get
+    {
+        return "";
+    }
+}
+
+public override string Key
+{
+    get
+    {
+        return "general/expression";
+    }
+}
+
+public override string Name
+{
+    get
+    {
+        return "Expression";
+    }
+}
+
+public override Type ServiceActorType
+{
+    get
+    {
+        return null;
+    }
+}
+
+public override IEnumerable&lt;string&gt; Tags
+{
+    get
+    {
+        return new[] {
+            "general",
+            "math",
+            "expression",
+            "script"
+        };
+    }
+}
+
+public override Type ToolActorType
+{
+    get
+    {
+        return typeof(ExpressionActor);
+    }
+}
+
+public override Type ToolConfigType
+{
+    get
+    {
+        return typeof(ExpressionConfig);
+    }
+}
+
+public override string Version
+{
+    get
+    {
+        return "0.0.1";
+    }
+}
+</code></pre>
+<p>}</p>
+<pre><code>
+### 4. Add the tool config class
+The tool config class allows us to setup a model for the configuration. This is where any properties required to execute the tool must go. Add a class called ExpressionConfig and derive it from `Phoenix.Execution.ToolConfig`. We will add a property called Expression to this class.
+
+```c#
+public class ExpressionConfig : ToolConfig
+{
+    /// &lt;summary&gt;
+    /// The epxression string
+    /// &lt;/summary&gt;
+    public string Expression { get; set; }
+
+    /// &lt;summary&gt;
+    /// Parameters used for input connectors
+    /// &lt;/summary&gt;
+    public List&lt;string&gt; Parameters { get; set; }
+
+    public ExpressionConfig()
+    {
+        Parameters = new List&lt;string&gt;();
+    }
+}
+</code></pre>
+
+<h3 id="5-add-the-tool-actor-class">5. Add the tool actor class</h3>
+<p>There are two primary method to implement in the tool actor class these are,</p>
+<ul>
+<li>Update - called when the tool configuration is updated. This is where connectors are added and anything other initialization occurs.</li>
+<li>Execute - called when the tool is executed. This is where the execution logic is performed and results are sent on wards.</li>
+</ul>
+<p>The implementation for the tool actor is as follows.</p>
+<p>```c#
+public class ExpressionActor : ExecutionActor
+{
+    private NCalc.Expression expression;</p>
+<pre><code>public ExpressionActor(PersistenceConfig persistenceConfig) : base(persistenceConfig)
+{
+}
+
+public ExpressionConfig ExpressionConfig
+{
+    get
+    {
+        return this.Config as ExpressionConfig;
+    }
+}
+
+protected override Tool Tool
+{
+    get
+    {
+        return new ExpressionTool();
+    }
+}
+
+protected override void Update()
+{
+    //Create an instance of the NCalc expression.
+    expression = new NCalc.Expression(ExpressionConfig.Expression);
+
+    //The expression will parse any parameters bases on the NCalc specification.
+    //These are added as connectors
+    foreach (var parameter in expression.Parameters.Keys)
+    {
+        AddConnector(new DataConnector&lt;object&gt;(parameter));
+    }
+
+    //Add a connector for the result
+    AddConnector(new DataConnector&lt;object&gt;("Result"));
+}
+
+protected override void Execute()
+{
+    //Set each NCalc expression parameter using the current value.
+    //Use GetCurrentValue to retrieve the value at the time of execution
+    foreach (var parameter in expression.Parameters.Keys)
+    {
+        expression.Parameters[parameter] = GetCurrentValue(parameter);
+    }
+
+    //Evaluate the expression
+    var result = expression.Evaluate();
+
+    //Get the result connector and send the value to any connected tools.
+    var resultConnector = GetConnector("Result") as DataConnector;
+    resultConnector.Send(result);
+}
+</code></pre>
+<p>}</p>
+<pre><code>
+### 6. Add the tool service class
+For this tool we don't need a service so it is left out. Here is an example of what a tool service might look like.
+
+```c#
+public ExpressionService : ToolService
+{
+}
+</code></pre>
+
+<h3 id="finishing-up">Finishing up</h3>
+<p>To deploy the tool it will need to be copied into the <code>Modules</code> folder of Node.Phoenix.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../modules/service-modules/get-started/" class="btn btn-neutral" title="Service Modules"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../modules/service-modules/get-started/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>

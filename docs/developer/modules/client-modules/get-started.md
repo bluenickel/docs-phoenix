@@ -35,7 +35,7 @@ You can download the repository as a zip file by browsing to the following link.
 [https://bluenickel.visualstudio.com/Phoenix-Platform/_git/Module-Skeleton](https://bluenickel.visualstudio.com/Phoenix-Platform/_git/Module-Skeleton)
 
 
-![Download](get-started/download.png)
+![Download](img/download.png)
 
 ## 2. Preparing the module
 If you are using Visual Studio, rename `Module-Skeleton.csproj` and `Module-Skeleton.sln` to the desired name of your moduel.
@@ -48,7 +48,7 @@ Rename the directory `src/module-skeleton` to the name name of your module.
 
 Edit the information in package.json to reflect your new module.
 
-![Package.json](get-started/package.json.png)
+![Package.json](img/package.json.png)
 
 ## 3. Install Dependencies
 You need to install NPM and JSPM dependencies as well as the TypeScript typings. The following commands describe how to do this. All the commands in this section should be executed in the same directory as your module directory, the one you just created.
@@ -136,7 +136,7 @@ If you see a message saying 'Failed to load. See output window...'. Try the foll
 * Then look for `Projects and Solutions->External Web Tools`
 * Add a new entry to `C:\Program Files\nodejs` (for an x64 install of Node.js) and move it to the top.
 
-![External Web Tools](get-started/external-web-tools.png)
+![External Web Tools](img/external-web-tools.png)
 
 ### Hosting the module
 
@@ -146,4 +146,4 @@ We will leave out how to use a local IIS server for now. Use the serve task abov
 
 You should see the default module tempalte and menu.
 
-![Module Screenhsot](get-started/module-screenshot.png)
+![Module Screenhsot](img/module-screenshot.png)
