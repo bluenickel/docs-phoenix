@@ -2,9 +2,5 @@ site_name: Phoenix Docs
 theme: readthedocs
 pages:
 - Home: 'index.md'
-- Developer: 
-    - Modules: 
-        - 'Get Started': 'developer/modules/get-started.md'
-        - 'Client Modules': 'developer/modules/client-modules/get-started.md'
-        - 'Service Modules': 'developer/modules/service-modules/get-started.md'
-    - Tools: 'developer/tools/get-started.md'
+- Installation: 
+        - 'IIS Url Rewrite': 'installation/iis-url-rewrite.md'

@@ -12,13 +12,7 @@
     
         
     <url>
-     <loc>None</loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/developer/tools/get-started/</loc>
+     <loc>None/installation/iis-url-rewrite/</loc>
      <lastmod>2016-08-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
