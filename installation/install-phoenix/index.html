@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>IIS Url Rewrite - Phoenix</title>
+        <title>Install Manual - Phoenix</title>
       
       
       
-        <link rel="canonical" href="https://www.bluenickel.co.za/installation/iis-url-rewrite/">
+        <link rel="canonical" href="https://www.bluenickel.co.za/installation/install-phoenix/">
       
       
         <meta name="author" content="Blue Nickel Solutions">
       
     
-    <meta property="og:url" content="https://www.bluenickel.co.za/installation/iis-url-rewrite/">
+    <meta property="og:url" content="https://www.bluenickel.co.za/installation/install-phoenix/">
     <meta property="og:title" content="Phoenix">
-    <meta property="og:image" content="https://www.bluenickel.co.za/installation/iis-url-rewrite//../../images/phoenix-logo.png">
+    <meta property="og:image" content="https://www.bluenickel.co.za/installation/install-phoenix//../../images/phoenix-logo.png">
     <meta name="apple-mobile-web-app-title" content="Phoenix">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -99,7 +99,7 @@
             
           </span>
         
-        IIS Url Rewrite
+        Install Manual
       </div>
     </div>
     
@@ -168,45 +168,49 @@
       
         
   <li>
-    <a class="" title="Install Manual" href="../install-phoenix/">
+    <a class="current" title="Install Manual" href="./">
       Install Manual
     </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Install IIS" href="#install-iis">
+                Install IIS
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Install Phoenix" href="#install-phoenix">
+                Install Phoenix
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Start the Phoenix Service" href="#start-the-phoenix-service">
+                Start the Phoenix Service
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Test the Phoenix Service" href="#test-the-phoenix-service">
+                Test the Phoenix Service
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
       
         
   <li>
-    <a class="current" title="IIS Url Rewrite" href="./">
+    <a class="" title="IIS Url Rewrite" href="../iis-url-rewrite/">
       IIS Url Rewrite
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Install Url ReWrite module" href="#install-url-rewrite-module">
-                Install Url ReWrite module
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Install Application Request Routing module" href="#install-application-request-routing-module">
-                Install Application Request Routing module
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Enable IIS proxy" href="#enable-iis-proxy">
-                Enable IIS proxy
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -232,26 +236,36 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="setup-iis-url-rewrite">Setup IIS Url Rewrite</h1>
-<p>OptoOne and Psibyl uses the IIS Url rewrite module to redirect traffic to the web applications on port 80 to their respective self-hosted services on other ports. In order for this to work correctly the following steps must be performed in a new unconfigured Windows machine.</p>
-<h2 id="install-url-rewrite-module">Install Url ReWrite module</h2>
-<p><a href="https://www.microsoft.com/en-za/download/details.aspx?id=7435">Download</a> the URL Rewrite Module 2.0 and isntall.</p>
-<h2 id="install-application-request-routing-module">Install Application Request Routing module</h2>
-<p><a href="https://www.iis.net/downloads/microsoft/application-request-routing">Download</a> the Application Request Routing module and install.</p>
-<h2 id="enable-iis-proxy">Enable IIS proxy</h2>
-<ul>
-<li>Open the IIS Manager and select the highest level root on the left.</li>
-<li>Oprn the 'Application Request Routing Cache' feature on the right.</li>
-</ul>
-<p><img alt="IIS ARR" src="../img/iis-arr.png" /></p>
-<ul>
-<li>Then select 'Server Proxy Settings' in the Actions menu on the right.</li>
-</ul>
-<p><img alt="IIS ARR Home" src="../img/iis-arr-home.png" /></p>
-<ul>
-<li>Make sure that the 'Enable proxy' check box is checked.</li>
-</ul>
-<p><img alt="IIS ARR Proxy" src="../img/iis-arr-proxy.png" /></p>
+            <h1>Install Manual</h1>
+          
+          <p>The following short manual will guide you through the setup process for a basic Phoenix installation on a single machine.</p>
+<h2 id="install-iis">Install IIS</h2>
+<p>Phoenix requires that IIS be installed and configured.</p>
+<h3 id="windows-server">Windows Server</h3>
+<p>From the server manager, add the Web Role and make sure that the <code>ASP.Net 4.5</code> and <code>WebSocket</code> features are selected.</p>
+<p><img alt="IIS Setup" src="../img/iis-setup-windows-server.gif" /> </p>
+<h3 id="windows-10">Windows 10</h3>
+<p>Add IIS from the "Program and Features". </p>
+<ol>
+<li>Right click start and select "Programs and Features" at the top.</li>
+<li>Select "Turn Windows features on or off" on the left.</li>
+<li>Make sure that the "Internet Information Services" is selected.</li>
+<li>Make sure the features shown above in 'Windows Server` are selected.</li>
+</ol>
+<h2 id="install-phoenix">Install Phoenix</h2>
+<p>Run the Phoenix installer and follow the prompts. Allow all default settings for a basic setup on a single machine.</p>
+<p><img alt="Phoenix Setup" src="../img/phoenix-setup.gif" /></p>
+<h2 id="start-the-phoenix-service">Start the Phoenix Service</h2>
+<p>If you did not need to restart the machine, you will need to start the Phoenix service.</p>
+<ol>
+<li>Enter, <code>Windows Key + R</code> </li>
+<li>Type in <code>services.msc</code></li>
+<li>Browse for the 'Phoenix' service.</li>
+<li>Start the service if it is not already running.</li>
+</ol>
+<h2 id="test-the-phoenix-service">Test the Phoenix Service</h2>
+<p>Open up your browser and enter <code>localhost/phoenix</code> in the address bar. You should be greeted with the following screen.</p>
+<p><img alt="Phoenix Landing" src="../img/phoenix-landing.png" /></p>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 Blue Nickel Solutions &ndash;
@@ -270,7 +284,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../install-phoenix/" title="Install Manual">
+        <a href="../.." title="Home">
           <span class="direction">
             Previous
           </span>
@@ -280,7 +294,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                Install Manual
+                Home
               </div>
             </div>
           </div>
@@ -288,6 +302,22 @@
       
     </div>
     <div class="next">
+      
+        <a href="../iis-url-rewrite/" title="IIS Url Rewrite">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                IIS Url Rewrite
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
       
     </div>
   </nav>
