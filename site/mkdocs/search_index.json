@@ -11,6 +11,41 @@
             "title": "Welcome to Phoenix Docs"
         }, 
         {
+            "location": "/installation/install-phoenix/", 
+            "text": "The following short manual will guide you through the setup process for a basic Phoenix installation on a single machine.\n\n\nInstall IIS\n\n\nPhoenix requires that IIS be installed and configured.\n\n\nWindows Server\n\n\nFrom the server manager, add the Web Role and make sure that the \nASP.Net 4.5\n and \nWebSocket\n features are selected.\n\n\n \n\n\nWindows 10\n\n\nAdd IIS from the \"Program and Features\". \n\n\n\n\nRight click start and select \"Programs and Features\" at the top.\n\n\nSelect \"Turn Windows features on or off\" on the left.\n\n\nMake sure that the \"Internet Information Services\" is selected.\n\n\nMake sure the features shown above in 'Windows Server` are selected.\n\n\n\n\nInstall Phoenix\n\n\nRun the Phoenix installer and follow the prompts. Allow all default settings for a basic setup on a single machine.\n\n\n\n\nNote\n:\n You may need to restart the machine after the installation is complete, especially if the .Net Framework was installed.\n\n\nStart the Phoenix Service\n\n\nIf you did not need to restart the machine, you will need to start the Phoenix service.\n\n\n\n\nEnter, \nWindows Key + R\n \n\n\nType in \nservices.msc\n\n\nBrowse for the 'Phoenix' service.\n\n\nStart the service if it is not already running.\n\n\n\n\nTest the Phoenix Service\n\n\nOpen up your browser and enter \nlocalhost/phoenix\n in the address bar. You should be greeted with the following screen.", 
+            "title": "Install Manual"
+        }, 
+        {
+            "location": "/installation/install-phoenix/#install-iis", 
+            "text": "Phoenix requires that IIS be installed and configured.", 
+            "title": "Install IIS"
+        }, 
+        {
+            "location": "/installation/install-phoenix/#windows-server", 
+            "text": "From the server manager, add the Web Role and make sure that the  ASP.Net 4.5  and  WebSocket  features are selected.", 
+            "title": "Windows Server"
+        }, 
+        {
+            "location": "/installation/install-phoenix/#windows-10", 
+            "text": "Add IIS from the \"Program and Features\".    Right click start and select \"Programs and Features\" at the top.  Select \"Turn Windows features on or off\" on the left.  Make sure that the \"Internet Information Services\" is selected.  Make sure the features shown above in 'Windows Server` are selected.", 
+            "title": "Windows 10"
+        }, 
+        {
+            "location": "/installation/install-phoenix/#install-phoenix", 
+            "text": "Run the Phoenix installer and follow the prompts. Allow all default settings for a basic setup on a single machine.   Note :  You may need to restart the machine after the installation is complete, especially if the .Net Framework was installed.", 
+            "title": "Install Phoenix"
+        }, 
+        {
+            "location": "/installation/install-phoenix/#start-the-phoenix-service", 
+            "text": "If you did not need to restart the machine, you will need to start the Phoenix service.   Enter,  Windows Key + R    Type in  services.msc  Browse for the 'Phoenix' service.  Start the service if it is not already running.", 
+            "title": "Start the Phoenix Service"
+        }, 
+        {
+            "location": "/installation/install-phoenix/#test-the-phoenix-service", 
+            "text": "Open up your browser and enter  localhost/phoenix  in the address bar. You should be greeted with the following screen.", 
+            "title": "Test the Phoenix Service"
+        }, 
+        {
             "location": "/installation/iis-url-rewrite/", 
             "text": "Setup IIS Url Rewrite\n\n\nOptoOne and Psibyl uses the IIS Url rewrite module to redirect traffic to the web applications on port 80 to their respective self-hosted services on other ports. In order for this to work correctly the following steps must be performed in a new unconfigured Windows machine.\n\n\nInstall Url ReWrite module\n\n\nDownload\n the URL Rewrite Module 2.0 and isntall.\n\n\nInstall Application Request Routing module\n\n\nDownload\n the Application Request Routing module and install.\n\n\nEnable IIS proxy\n\n\n\n\nOpen the IIS Manager and select the highest level root on the left.\n\n\nOprn the 'Application Request Routing Cache' feature on the right.\n\n\n\n\n\n\n\n\nThen select 'Server Proxy Settings' in the Actions menu on the right.\n\n\n\n\n\n\n\n\nMake sure that the 'Enable proxy' check box is checked.", 
             "title": "IIS Url Rewrite"

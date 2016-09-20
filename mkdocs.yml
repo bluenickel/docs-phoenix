@@ -1,6 +1,29 @@
-site_name: Phoenix Docs
+site_name: Phoenix
+site_description: 'Phoenix Proccess Performance Suite'
+site_author: 'Blue Nickel Solutions'
+site_url: 'https://www.bluenickel.co.za'
+
 theme: material
+
+# Repository
+repo_name: 'Phoenix-Platform'
+repo_url: 'https://github.com/0lympus'
+
+# Copyright
+copyright: 'Copyright (c) 2016 Blue Nickel Solutions'
+
 pages:
 - Home: 'index.md'
 - Installation: 
+        - 'Install Manual': 'installation/install-phoenix.md'
         - 'IIS Url Rewrite': 'installation/iis-url-rewrite.md'
+
+# Options
+extra:
+    version: '0.1.0'
+    logo: 'images/phoenix-logo.png'
+    palette:
+        primary: 'indigo'
+        accent: 'light blue'
+    author: 
+        web: 'httpL//www.bluenickel.co.za'

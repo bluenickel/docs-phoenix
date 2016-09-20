@@ -3,8 +3,8 @@
 
     
     <url>
-     <loc>None/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <loc>https://www.bluenickel.co.za/</loc>
+     <lastmod>2016-09-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,8 +12,14 @@
     
         
     <url>
-     <loc>None/installation/iis-url-rewrite/</loc>
-     <lastmod>2016-08-18</lastmod>
+     <loc>https://www.bluenickel.co.za/installation/install-phoenix/</loc>
+     <lastmod>2016-09-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.bluenickel.co.za/installation/iis-url-rewrite/</loc>
+     <lastmod>2016-09-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
