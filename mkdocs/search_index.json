@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/installation/install-phoenix/", 
-            "text": "The following short manual will guide you through the setup process for a basic Phoenix installation on a single machine.\n\n\nInstall IIS\n\n\nPhoenix requires that IIS be installed and configured.\n\n\nWindows Server\n\n\nFrom the server manager, add the Web Role and make sure that the \nASP.Net 4.5\n and \nWebSocket\n features are selected.\n\n\n \n\n\nWindows 10\n\n\nAdd IIS from the \"Program and Features\". \n\n\n\n\nRight click start and select \"Programs and Features\" at the top.\n\n\nSelect \"Turn Windows features on or off\" on the left.\n\n\nMake sure that the \"Internet Information Services\" is selected.\n\n\nMake sure the features shown above in 'Windows Server` are selected.\n\n\n\n\nInstall Phoenix\n\n\nRun the Phoenix installer and follow the prompts. Allow all default settings for a basic setup on a single machine.\n\n\n\n\nStart the Phoenix Service\n\n\nIf you did not need to restart the machine, you will need to start the Phoenix service.\n\n\n\n\nEnter, \nWindows Key + R\n \n\n\nType in \nservices.msc\n\n\nBrowse for the 'Phoenix' service.\n\n\nStart the service if it is not already running.\n\n\n\n\nTest the Phoenix Service\n\n\nOpen up your browser and enter \nlocalhost/phoenix\n in the address bar. You should be greeted with the following screen.", 
+            "text": "The following short manual will guide you through the setup process for a basic Phoenix installation on a single machine.\n\n\nInstall IIS\n\n\nPhoenix requires that IIS be installed and configured.\n\n\nWindows Server\n\n\nFrom the server manager, add the Web Role and make sure that the \nASP.Net 4.5\n and \nWebSocket\n features are selected.\n\n\n \n\n\nWindows 10\n\n\nAdd IIS from the \"Program and Features\". \n\n\n\n\nRight click start and select \"Programs and Features\" at the top.\n\n\nSelect \"Turn Windows features on or off\" on the left.\n\n\nMake sure that the \"Internet Information Services\" is selected.\n\n\nMake sure the features shown above in 'Windows Server` are selected.\n\n\n\n\nInstall Phoenix\n\n\nRun the Phoenix installer and follow the prompts. Allow all default settings for a basic setup on a single machine.\n\n\n\n\nNote\n:\n You may need to restart the machine after the installation is complete, especially if the .Net Framework was installed.\n\n\nStart the Phoenix Service\n\n\nIf you did not need to restart the machine, you will need to start the Phoenix service.\n\n\n\n\nEnter, \nWindows Key + R\n \n\n\nType in \nservices.msc\n\n\nBrowse for the 'Phoenix' service.\n\n\nStart the service if it is not already running.\n\n\n\n\nTest the Phoenix Service\n\n\nOpen up your browser and enter \nlocalhost/phoenix\n in the address bar. You should be greeted with the following screen.", 
             "title": "Install Manual"
         }, 
         {
@@ -32,7 +32,7 @@
         }, 
         {
             "location": "/installation/install-phoenix/#install-phoenix", 
-            "text": "Run the Phoenix installer and follow the prompts. Allow all default settings for a basic setup on a single machine.", 
+            "text": "Run the Phoenix installer and follow the prompts. Allow all default settings for a basic setup on a single machine.   Note :  You may need to restart the machine after the installation is complete, especially if the .Net Framework was installed.", 
             "title": "Install Phoenix"
         }, 
         {
